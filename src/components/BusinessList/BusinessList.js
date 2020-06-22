@@ -7,8 +7,8 @@ import './BusinessList.css';
  */
 class BusinessList extends React.Component {
   render() {
-    const businessData = 
-    this.props.business.map(business => <Business business={business} key={business.id} />);
+    const { business } = this.props;
+    const businessData = business.map(item => <Business business={item} key={item.id} />);
     return (
       <div className="BusinessList">
         {businessData}
@@ -16,5 +16,9 @@ class BusinessList extends React.Component {
     );
   }
 }
+
+BusinessList.defaultProps = {
+  business: [],
+};
 
 export default BusinessList;

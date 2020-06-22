@@ -22,7 +22,7 @@ class App extends React.Component {
     console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`); /* eslint-disable-line */
     Yelp.search(term, location, sortBy).then((businesses) => {
       this.setState({
-        businesses,
+        businesses: businesses,
       });
     });
   }
