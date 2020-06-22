@@ -1,4 +1,4 @@
-const apiKey = 'rbDroDpW5iSC4i4msaJc28t2TzKYoUEX3Tm_9ihGRBZJMgMn8FXblaajSwD3V8PbCmvvvUrc0mwkojxJ8rAm9j3HQ4r3w6JlYo733LWKB6h7-IZiUB6VQGM7XIvwXnYx';
+const apiKey = process.env.API_KEY;
 
 const corsUrl = 'https://cors-anywhere.herokuapp.com/';
 
