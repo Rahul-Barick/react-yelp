@@ -1,8 +1,0 @@
-[build]
-  command = "npm run build"
-  publish = "build"
-
-# Production context: All deploys from the Production branch set in your site's deploy settings will inherit these settings.
-[context.production]
-  environment = { API_KEY = "super secret" }
-
