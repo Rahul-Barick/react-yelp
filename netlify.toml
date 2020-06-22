@@ -1,5 +1,43 @@
+# Settings in the [build] context are global and are applied to all contexts unless otherwise overridden by more specific contexts.
+
+[build]
+  # This is the directory to change to before starting a build.
+  base    = "react-ravenous-yelp/"
+  # NOTE: This is where we will look for package.json/.nvmrc/etc, not root.
+  # This is the directory that you are publishing from (relative to root of your repo)
+  publish = "react-ravenous-yelp/build/"
+  # This will be your default build command
+  command = "Build React APP:::"
+  # Ignore build command if exit 0
+  ignore = "git diff --quiet HEAD^ HEAD sub_dir/"
+  # If skip_processing = true, all other settings are ignored
+  [build.processing]
+    skip_processing = false
+  [build.processing.css]
+    bundle = true
+    minify = false
+  [build.processing.js]
+    bundle = true
+    minify = false
+  [build.processing.html]
+    pretty_urls = true
+  [build.processing.images]
+    compress = true
+
+
+# Production context: All deploys from the Production branch set in your site's deploy settings will inherit these settings.
 [context.production]
-  command = "sudo npm i -g npm"
-  command = "sudo npm i"
-  command = "npm run build"
+  publish = "output/"
+  command = "make publish"
   environment = { API_KEY = "super secret" }
+
+# NOTE: env variables are only natively supported for this signed property of headers via this mechanism!
+# You can also define custom headers within your redirects blocks
+  [redirects.headers]
+    X-From = "Netlify"
+    API_KEY = "some-api-key-string"
+# The following redirect is intended for use with most SPA's that handles routing internally.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
