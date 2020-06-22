@@ -31,13 +31,3 @@
   command = "make publish"
   environment = { API_KEY = "super secret" }
 
-# NOTE: env variables are only natively supported for this signed property of headers via this mechanism!
-# You can also define custom headers within your redirects blocks
-  [redirects.headers]
-    X-From = "Netlify"
-    API_KEY = "some-api-key-string"
-# The following redirect is intended for use with most SPA's that handles routing internally.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
