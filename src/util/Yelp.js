@@ -1,9 +1,9 @@
 const apiKey = process.env.API_KEY;
-
 const corsUrl = 'https://cors-anywhere.herokuapp.com/';
 
 const Yelp = {
   search: async (term, location, sortBy) => {
+    console.log(`Enviornment Variable::: ${process.env.API_KEY}, ${process.env.NODE_ENV}`);
     const response = await fetch(
       `${corsUrl}https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`,
       {

@@ -3,5 +3,6 @@
   publish = "build"
 
 [context.production.environment]
-   REACT_APP_API_KEY = "From netlify.toml (REACT_APP_)"
+  API_KEY = "From netlify.toml"
+  NODE_ENV = "From netlify.toml"
  
