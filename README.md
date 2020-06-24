@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live version running on Netlify
+
+Open [https://react-ravenous-yelp.netlify.app](https://react-ravenous-yelp.netlify.app) to view it in the browser.
+
 ## Available Scripts
 
 In the project directory, you can run:
