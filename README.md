@@ -12,4 +12,6 @@ With [Netlfiy](https://www.netlify.com/) it's very cool way to deploy your apps 
 
 **Note: This project is in the initial stage, few features are still pending but searching functionality works fine. One more thing to add while searching location make sure you search outside india because this app data is not available for it currently. For eg:- you can search any of your favorite dish and location as US/Uk apart from India **
 
+Recent Update:- This App won't run due to CORS issues of react app (Need to fix it). 
+
 ## #Happy Coding :)
